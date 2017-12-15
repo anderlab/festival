@@ -98,6 +98,13 @@ public class Main_Festival {
 		 festival.mostrarInfo();
 		 
 		 
+		 
+		 festival.addActuacion("Slipknot", 50);
+		 
+		 festival.mostrarInfo(); //Falla iterador xq actuaciones es null
+		 
+		 
+		 
 			 
 
 	}

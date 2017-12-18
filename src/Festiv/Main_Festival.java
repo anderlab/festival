@@ -104,6 +104,10 @@ public class Main_Festival {
 		 festival.mostrarInfo(); //Falla iterador xq actuaciones es null
 		 
 		 
+		 festival.addActuacion("El reno renardo", 100);
+		 
+		 festival.mostrarInfo();
+		 
 		 
 			 
 

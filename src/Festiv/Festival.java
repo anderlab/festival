@@ -53,6 +53,49 @@ public class Festival {
 		}
 				
 		
+	}
+	
+	
+	
+	
+	
+	
+	public void eliminarActuacion (String grupo){
+		
+		Iterator <Actuacion> i =this.actuaciones.iterator();
+		
+		while (i.hasNext()){
+			
+			if(grupo.equals(getNombre())){
+				
+				
+			}
+			
+			
+					
+		}
+		
+		
+	}
+	
+	
+	public void cambiarDuracionActuacion (String nombre_grupo, int duracion){
+		
+		
+		for (int i=0; i< this.actuaciones.size(); i++){
+			if(this.actuaciones.get(i).getNombreGrupo().equals(nombre_grupo)){
+				
+				//Actuacion a = new Actuacion (nombre_grupo, duracion);
+				
+				Actuacion a = this.actuaciones.get(i);
+				a.setDuracion(duracion);
+				this.actuaciones.set(i, a);
+				
+			}
+			
+			
+		}
+		
 		
 	}
 	

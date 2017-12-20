@@ -29,7 +29,7 @@ public class Actuacion {
 		this.nombreGrupo = nombreGrupo;
 	}
 
-	public double getDuracion() {
+	public int getDuracion() {
 		return duracion;
 	}
 

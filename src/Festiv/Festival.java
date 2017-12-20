@@ -11,7 +11,7 @@ public class Festival {
 	//Patrocinador
 	
 	private String patrocinador;
-	//Arraylist <Axtuacion>
+	//Arraylist <Actuacion>
 	
 	ArrayList<Actuacion> actuaciones = new ArrayList<Actuacion>();
 
@@ -41,9 +41,11 @@ public class Festival {
 		System.out.println(getNombre());
 		System.out.println("------------");
 		System.out.println("Patrocinado por "+getPatrocinador());
+		System.out.println(this.getDuracion()+" minutos de musica!!");
 		
 		
 		Iterator <Actuacion> i = this.actuaciones.iterator();
+		
 		//Iterator <Actuacion> i = getActuaciones.iterator();
 		
 		
@@ -58,6 +60,21 @@ public class Festival {
 	
 	
 	
+	private int getDuracion (){
+		
+		Iterator <Actuacion> i = this.actuaciones.iterator();
+		int suma=0;
+		
+		while (i.hasNext()){
+			
+			suma=suma+ i.next().getDuracion();
+			
+		}
+		
+		return suma;
+	}
+	
+	
 	
 	
 	public void eliminarActuacion (String grupo){
@@ -66,16 +83,15 @@ public class Festival {
 		
 		while (i.hasNext()){
 			
-			if(grupo.equals(getNombre())){
-				
-				
+			
+			
+			if(i.next().getNombreGrupo().equals(grupo)){
+				i.remove();
+						
 			}
-			
-			
-					
+						
 		}
-		
-		
+	
 	}
 	
 	

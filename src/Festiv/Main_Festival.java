@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main_Festival {
 
 	public static void main(String[] args) {
+		Scanner lector= new Scanner (System.in);
 	 
 		// Crear una actuacion por programacion
 		
@@ -18,21 +19,21 @@ public class Main_Festival {
 		
 		
 		
-		//Crear una actuacion con inputs de teclado
-		
-		Actuacion a2= new Actuacion();
-		
-		System.out.println("Introduce un nombre de grupo");
-		
-		 Scanner lector= new Scanner (System.in);
-		 String nombre =lector.nextLine();
-		 a2.setNombreGrupo(nombre);
-		 
-		System.out.println("Introduce una duracion");
-		 
-		 String duracion =lector.nextLine();
-		 
-		 a2.setDuracion(Integer.parseInt(duracion));
+//		//Crear una actuacion con inputs de teclado
+//		
+//		Actuacion a2= new Actuacion();
+//		
+//		System.out.println("Introduce un nombre de grupo");
+//		
+//		 Scanner lector= new Scanner (System.in);
+//		 String nombre =lector.nextLine();
+//		 a2.setNombreGrupo(nombre);
+//		 
+//		System.out.println("Introduce una duracion");
+//		 
+//		 String duracion =lector.nextLine();
+//		 
+//		 a2.setDuracion(Integer.parseInt(duracion));
 		 
 		
 		
@@ -77,7 +78,7 @@ public class Main_Festival {
 		 ArrayList<Actuacion> actuaciones = new ArrayList<Actuacion>();
 		 
 		 actuaciones.add(a1);
-		 actuaciones.add(a2);
+		// actuaciones.add(a2);
 		 actuaciones.add(a3);
 		 
 		 festival.setActuaciones(actuaciones);
@@ -108,6 +109,17 @@ public class Main_Festival {
 		 
 		 festival.mostrarInfo();
 		 
+		 
+		 System.out.println("Introduce un grupo para eliminar delf estival");
+		 String grupo= lector.nextLine();
+		 
+		 festival.eliminarActuacion(grupo);
+		 
+		 //-------------------------------------
+		 
+		 actuaciones = festival.getActuaciones();
+		 
+		 festival.mostrarInfo();
 		 
 			 
 
